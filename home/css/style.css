@@ -3,9 +3,7 @@
 /*================================
          Basic styles
 =================================*/
-body {
-    height: 2000px;
-}
+
 *{
     margin:0;
     padding:0;
@@ -168,6 +166,46 @@ body {
     font-size: 400%;
 }
 
+/*================================
+          Services sections
+=================================*/
+
+.service-wrap {
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+    padding: 25px 35px;
+    position: relative;
+    transition: all 0.5s ease 0s;
+    z-index: 9;
+    margin-top: 20px;
+}
+
+.service-wrap::befor, .service-wrap::after {
+    content: "";
+    height: 300%;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 120%;
+    z-index: -9;
+    transition: all 0.5s;
+    opacity: 0;
+    background: #34495e;
+}
+
+.service-wrap::befor {
+    top: -37px;
+    left: 100%;
+}
+
+.service-wrap:hover:befor {
+    left: -27px;
+    opacity: 1;
+}
+
+.service-wrap::after {
+    right: -27px;
+    opacity: 1;
+}
 /*================================
           Media Query
 =================================*/
