@@ -169,7 +169,6 @@
 /*================================
           Services sections
 =================================*/
-
 .service-wrap {
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     overflow: hidden;
@@ -180,7 +179,7 @@
     margin-top: 20px;
 }
 
-.service-wrap::befor, .service-wrap::after {
+.service-wrap::before, .service-wrap::after {
     content: "";
     height: 300%;
     position: absolute;
@@ -203,9 +202,40 @@
 }
 
 .service-wrap::after {
+    right: 100%;
+    bottom: -37px;
+}
+
+.service-wrap:hover:after {
     right: -27px;
     opacity: 1;
 }
+
+.service-wrap:hover {
+    color: white;
+}
+
+.service-wrap:h3 {
+    color: white;
+}
+.service-wrap:hover h3 {
+    color: white;
+}
+
+.service-wrap:hover h3::after {
+    background-color: white;
+}
+
+.service-icon {
+    font-size: 30px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.service-wrap:hover .service-icon i {
+    transform: rotate(360deg);
+}
+
 /*================================
           Media Query
 =================================*/
